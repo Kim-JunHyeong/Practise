@@ -1,6 +1,5 @@
 ## 1주차 : JVM은 무엇이며 자바 코드는 어떻게 실행하는 것인가.
 
----
 
 ## 학습 목표
 
@@ -91,7 +90,7 @@ JIT 컴파일러가 컴파일하는 과정은 인터프리팅 방식보다 오�
 
 ![JVM구조](https://raw.githubusercontent.com/Kim-JunHyeong/java-study/main/images/JVM%20structure.png)
 
-- 이미지 및 내용 출처 : [https://www.inflearn.com/course/the-java-code-manipulation](https://www.inflearn.com/course/the-java-code-manipulation)
+- 출처 : [https://www.inflearn.com/course/the-java-code-manipulation](https://www.inflearn.com/course/the-java-code-manipulation)
 
 JVM의 구조는 크게 클래스 로더 시스템, 메모리, 실행 엔진, 네이티브 메소드 인터페이스(JNI), 네이티브 메소드 라이브러리 5가지로 나눌 수 있으며 각각의 역할은 다음과 같습니다.
 
