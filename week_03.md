@@ -250,7 +250,7 @@ number >>>= 3; 		// number = number >>> 3
 - 조건식을 연산하여 ``TRUE`` 가 나오면 결과는 피연산자2
 - 조건식을 연산하여 ``FALSE`` 가 나오면 결과는 피연산자3
 
-![삼항 연산자](D:\Users\CrAzy\Desktop\삼항 연산자.PNG)
+![삼항 연산자](https://raw.githubusercontent.com/Kim-JunHyeong/java-study/main/images/week3.PNG)
 
 - 삼항 연산자는 if 문으로 작성할 수 있지만 간단한 연산은 삼항 연산자를 사용하는 것이 더 효율적입니다.
 
