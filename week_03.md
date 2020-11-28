@@ -298,7 +298,9 @@ public int max(int x, int y) {
 
 ### Java 13. switch 연산자
 
-- Java 12 에서 ``switch`` 문이 확장되어 추가적인 기능이 생겼습니다.
+- Java 12 에서 ``switch`` 문이 확장되어 yield (yielding a value) 키워드가 생겼습니다.
+- ``break``키워드를 대신하여 ``yield``로 대체되었다고 합니다.
+- 몇 번 봤지만 제대로 이해가 되지 않아 추후에 정리하도록 하겠습니다
 
 
 
