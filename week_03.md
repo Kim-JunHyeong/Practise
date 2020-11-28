@@ -307,4 +307,5 @@ public int max(int x, int y) {
 ### 참조
 
 - [이것이 자바다](https://www.hanbit.co.kr/store/books/look.php?p_code=B1460673937)
+- [https://github.com/whiteship/live-study/issues/1](https://github.com/whiteship/live-study/issues/1)
 
