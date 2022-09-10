@@ -3,11 +3,11 @@ package core.practise;
 import core.practise.member.Grade;
 import core.practise.member.Member;
 import core.practise.member.MemberService;
-import core.practise.member.MemberServiceImpl;
 
 public class MemberApp {
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
 

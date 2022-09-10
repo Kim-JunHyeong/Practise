@@ -3,15 +3,14 @@ package core.practise;
 import core.practise.member.Grade;
 import core.practise.member.Member;
 import core.practise.member.MemberService;
-import core.practise.member.MemberServiceImpl;
 import core.practise.order.Order;
 import core.practise.order.OrderService;
-import core.practise.order.OrderServiceImpl;
 
 public class OrderApp {
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
-        OrderService orderService = new OrderServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+        OrderService orderService = appConfig.orderService();
 
         long memberId = 1L;
         Member member = new Member(memberId, "memberA", Grade.VIP);

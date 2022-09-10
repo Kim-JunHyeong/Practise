@@ -1,6 +1,7 @@
 package core.practise.order;
 
 import core.practise.discount.DiscountPolicy;
+import core.practise.discount.FixDiscountPolicy;
 import core.practise.member.Member;
 import core.practise.member.MemberRepository;
 import core.practise.member.MemoryMemberRepository;
@@ -10,10 +11,13 @@ import core.practise.member.MemoryMemberRepository;
  */
 public class OrderServiceImpl implements OrderService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
-//    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
-//    private final DiscountPolicy discountPolicy = new RateDiscountPolicy(); // 1. 정책 변경
-    private DiscountPolicy discountPolicy; // 2. 인터페이스에만 의존하도록 변경
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
+
+    public OrderServiceImpl(MemoryMemberRepository memoryMemberRepository, FixDiscountPolicy fixDiscountPolicy) {
+        this.memberRepository = memoryMemberRepository;
+        this.discountPolicy = fixDiscountPolicy;
+    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
