@@ -3,6 +3,7 @@ package core.practise.singleton;
 import core.practise.AppConfig;
 import core.practise.member.MemberRepository;
 import core.practise.member.MemberServiceImpl;
+import core.practise.member.MemoryMemberRepository;
 import core.practise.order.OrderServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
@@ -28,5 +29,20 @@ public class ConfigurationSingletonTest {
 
         assertThat(memberService.getMemberRepository()).isSameAs(memberRepository);
         assertThat(orderService.getMemberRepository()).isSameAs(memberRepository);
+    }
+
+    @Test
+    void configurationDeep() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        // AppConfig도 스프링 빈으로 등록된다.
+        AppConfig bean = ac.getBean(AppConfig.class);
+
+        System.out.println("bean = " + bean.getClass());
+        // 출력 : bean = class core.practise.AppConfig$$EnhancerBySpringCGLIB$$b0c7b271
+
+        // 순수한 클래스
+        MemberRepository memberRepository = new MemoryMemberRepository();
+        System.out.println("순수 = " + memberRepository.getClass());
     }
 }
